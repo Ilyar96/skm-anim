@@ -14,6 +14,15 @@ body {
 
 /* Удалить */
 
+.intro__screen {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 200vh;
+}
+
 .bg-block {
 	position: absolute;
 	top: 0;
@@ -25,11 +34,11 @@ body {
 }
 
 .bg-block--2 {
-	animation-duration: 100s;
+	animation-duration: 55s;
 }
 
 .bg-block--3 {
-	animation-duration: 150s;
+	animation-duration: 60s;
 }
 
 .bg-item {
@@ -220,36 +229,6 @@ body {
 
 	to {
 		transform: translateY(-100vh);
-	}
-}
-
-@-ms-keyframes spin {
-	from {
-		-ms-transform: rotate(0deg);
-	}
-
-	to {
-		-ms-transform: rotate(360deg);
-	}
-}
-
-@-moz-keyframes spin {
-	from {
-		-moz-transform: rotate(0deg);
-	}
-
-	to {
-		-moz-transform: rotate(360deg);
-	}
-}
-
-@-webkit-keyframes spin {
-	from {
-		-webkit-transform: rotate(0deg);
-	}
-
-	to {
-		-webkit-transform: rotate(360deg);
 	}
 }
 
