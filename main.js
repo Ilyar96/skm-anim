@@ -63,13 +63,16 @@ for (let ci = 0; ci < cols.length; ci++) {
 	}
 }
 
-bgBlock1.append(...nodeList1);
-bgBlock2.append(...nodeList2);
-bgBlock3.append(...nodeList3);
+function appendBgBlockToWrapper(bgBlockNode, nodeList) {
+	bgBlockNode.append(...nodeList);
 
-console.log(
-	"nodeList1: ",
-	nodeList1.length,
-	nodeList2.length,
-	nodeList3.length
-);
+	const clone = bgBlockNode.cloneNode(true);
+	clone.classList.add("bg-block--clone");
+	bgWrapper.append(clone);
+}
+
+appendBgBlockToWrapper(bgBlock1, nodeList1);
+appendBgBlockToWrapper(bgBlock2, nodeList2);
+appendBgBlockToWrapper(bgBlock3, nodeList3);
+
+bgWrapper.classList.add("active");
