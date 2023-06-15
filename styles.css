@@ -61,23 +61,23 @@ body {
 	width: 30px;
 	height: 30px;
 
-	animation: spin 6s linear infinite;
+	animation: spin 12s linear infinite;
 }
 
 .stars-block .stars-item:nth-child(5n+1) {
-	animation-duration: 7s;
+	animation-duration: 14s;
 }
 
 .stars-block .stars-item:nth-child(5n+2) {
-	animation-duration: 8s;
+	animation-duration: 16s;
 }
 
 .stars-block .stars-item:nth-child(5n+3) {
-	animation-duration: 9s;
+	animation-duration: 18s;
 }
 
 .stars-block .stars-item:nth-child(5n+4) {
-	animation-duration: 10s;
+	animation-duration: 20s;
 }
 
 .stars-item--1 {

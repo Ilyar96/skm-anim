@@ -71,6 +71,6 @@ function createStars(wrapperNode, sizeDivider = 6) {
 
 createStars(starsBlock1);
 createStars(starsBlock2, 4.5);
-createStars(starsBlock3, 3);
+createStars(starsBlock3, 1.5);
 
 starsWrapper.classList.add("active");
