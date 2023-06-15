@@ -23,7 +23,7 @@ body {
 	height: 100vh;
 }
 
-.bg-block {
+.stars-block {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -34,24 +34,24 @@ body {
 	opacity: 0;
 }
 
-.active .bg-block {
+.active .stars-block {
 	opacity: 1;
-	animation: moving 10s linear infinite;
+	animation: moving 25s linear infinite;
 }
 
-.bg-block--clone {
+.stars-block--clone {
 	top: 100vh;
 }
 
-.bg-block--2 {
-	animation-duration: 10.1s;
+.active .stars-block--2 {
+	animation-duration: 20s;
 }
 
-.bg-block--3 {
-	animation-duration: 10.2s;
+.active .stars-block--3 {
+	animation-duration: 15s;
 }
 
-.bg-item {
+.stars-item {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -64,171 +64,171 @@ body {
 	animation: spin 6s linear infinite;
 }
 
-.bg-block .bg-item:nth-child(5n+1) {
+.stars-block .stars-item:nth-child(5n+1) {
 	animation-duration: 7s;
 }
 
-.bg-block .bg-item:nth-child(5n+2) {
+.stars-block .stars-item:nth-child(5n+2) {
 	animation-duration: 8s;
 }
 
-.bg-block .bg-item:nth-child(5n+3) {
+.stars-block .stars-item:nth-child(5n+3) {
 	animation-duration: 9s;
 }
 
-.bg-block .bg-item:nth-child(5n+4) {
+.stars-block .stars-item:nth-child(5n+4) {
 	animation-duration: 10s;
 }
 
-.bg-item--1 {
+.stars-item--1 {
 	background: url('./img/1.png') center/contain no-repeat;
 }
 
-.bg-item--2 {
+.stars-item--2 {
 	background: url('./img/2.png') center/contain no-repeat;
 }
 
-.bg-item--3 {
+.stars-item--3 {
 	background: url('./img/3.png') center/contain no-repeat;
 }
 
-.bg-item--4 {
+.stars-item--4 {
 	background: url('./img/4.png') center/contain no-repeat;
 }
 
-.bg-item--5 {
+.stars-item--5 {
 	background: url('./img/5.png') center/contain no-repeat;
 }
 
-.bg-item--6 {
+.stars-item--6 {
 	background: url('./img/6.png') center/contain no-repeat;
 }
 
-.bg-item--7 {
+.stars-item--7 {
 	background: url('./img/7.png') center/contain no-repeat;
 }
 
-.bg-item--8 {
+.stars-item--8 {
 	background: url('./img/8.png') center/contain no-repeat;
 }
 
-.bg-item--9 {
+.stars-item--9 {
 	background: url('./img/9.png') center/contain no-repeat;
 }
 
-.bg-item--10 {
+.stars-item--10 {
 	background: url('./img/10.png') center/contain no-repeat;
 }
 
-.bg-item--11 {
+.stars-item--11 {
 	background: url('./img/11.png') center/contain no-repeat;
 }
 
-.bg-item--12 {
+.stars-item--12 {
 	background: url('./img/12.png') center/contain no-repeat;
 }
 
-.bg-item--13 {
+.stars-item--13 {
 	background: url('./img/13.png') center/contain no-repeat;
 }
 
-.bg-item--14 {
+.stars-item--14 {
 	background: url('./img/14.png') center/contain no-repeat;
 }
 
-.bg-item--5 {
+.stars-item--5 {
 	background: url('./img/5.png') center/contain no-repeat;
 }
 
-.bg-item--16 {
+.stars-item--16 {
 	background: url('./img/16.png') center/contain no-repeat;
 }
 
-.bg-item--17 {
+.stars-item--17 {
 	background: url('./img/17.png') center/contain no-repeat;
 }
 
-.bg-item--18 {
+.stars-item--18 {
 	background: url('./img/18.png') center/contain no-repeat;
 }
 
-.bg-item--19 {
+.stars-item--19 {
 	background: url('./img/19.png') center/contain no-repeat;
 }
 
-.bg-item--20 {
+.stars-item--20 {
 	background: url('./img/20.png') center/contain no-repeat;
 }
 
-.bg-item--21 {
+.stars-item--21 {
 	background: url('./img/21.png') center/contain no-repeat;
 }
 
-.bg-item--22 {
+.stars-item--22 {
 	background: url('./img/22.png') center/contain no-repeat;
 }
 
-.bg-item--23 {
+.stars-item--23 {
 	background: url('./img/23.png') center/contain no-repeat;
 }
 
-.bg-item--24 {
+.stars-item--24 {
 	background: url('./img/24.png') center/contain no-repeat;
 }
 
-.bg-item--25 {
+.stars-item--25 {
 	background: url('./img/25.png') center/contain no-repeat;
 }
 
-.bg-item--26 {
+.stars-item--26 {
 	background: url('./img/26.png') center/contain no-repeat;
 }
 
-.bg-item--27 {
+.stars-item--27 {
 	background: url('./img/27.png') center/contain no-repeat;
 }
 
-.bg-item--28 {
+.stars-item--28 {
 	background: url('./img/28.png') center/contain no-repeat;
 }
 
-.bg-item--29 {
+.stars-item--29 {
 	background: url('./img/29.png') center/contain no-repeat;
 }
 
-.bg-item--30 {
+.stars-item--30 {
 	background: url('./img/30.png') center/contain no-repeat;
 }
 
-.bg-item--31 {
+.stars-item--31 {
 	background: url('./img/31.png') center/contain no-repeat;
 }
 
-.bg-item--32 {
+.stars-item--32 {
 	background: url('./img/32.png') center/contain no-repeat;
 }
 
-.bg-item--33 {
+.stars-item--33 {
 	background: url('./img/33.png') center/contain no-repeat;
 }
 
-.bg-item--34 {
+.stars-item--34 {
 	background: url('./img/34.png') center/contain no-repeat;
 }
 
-.bg-item--35 {
+.stars-item--35 {
 	background: url('./img/35.png') center/contain no-repeat;
 }
 
-.bg-item--36 {
+.stars-item--36 {
 	background: url('./img/36.png') center/contain no-repeat;
 }
 
-.bg-item--37 {
+.stars-item--37 {
 	background: url('./img/37.png') center/contain no-repeat;
 }
 
-.bg-item--38 {
+.stars-item--38 {
 	background: url('./img/38.png') center/contain no-repeat;
 }
 
