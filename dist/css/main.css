@@ -795,19 +795,12 @@ body.ie ._ibg img {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	min-height: 100vh;
-	/* background: #000; */
 }
-
-/* .footer._watched {
-	background: none;
-	transition: all 0.3s 1s;
-} */
 
 .footer__content {
 	position: relative;
 	width: 100%;
-	padding: 5rem 0;
+	padding: 15rem 0;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -833,11 +826,10 @@ body.ie ._ibg img {
 	position: absolute;
 	left: 0;
 	z-index: -1;
-	content: "";
 	display: block;
 	width: 100%;
 	height: 170rem;
-	background: url(../img/icons/circle-transparent.gif) top -14.2rem center no-repeat;
+	background: url(../img/icons/circle-transparent.gif) top -14.2rem left 50% no-repeat;
 	background-size: 170rem;
 
 	/* opacity: 0; */
@@ -900,6 +892,8 @@ body.ie ._ibg img {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	width: 100%;
+	margin-top: -5.75rem !important;
+	padding-top: 5.75rem !important;
 }
 
 .page--mg {
@@ -1722,6 +1716,10 @@ body.ie ._ibg img {
 
 	.music__list a:hover {
 		color: #1a789f;
+	}
+
+	.blog {
+		margin-bottom: 20rem;
 	}
 }
 
@@ -2567,8 +2565,8 @@ body.ie ._ibg img {
 
 .active .stars-block {
 	opacity: 1;
-	-webkit-animation: moving 25s linear infinite;
-	animation: moving 25s linear infinite;
+	-webkit-animation: moving var(--stars-animation-duration-1, 205s) linear infinite;
+	animation: moving var(--stars-animation-duration-1, 205s) linear infinite;
 }
 
 .stars-block--clone {
@@ -2576,13 +2574,13 @@ body.ie ._ibg img {
 }
 
 .active .stars-block--2 {
-	-webkit-animation-duration: 20s;
-	animation-duration: 20s;
+	-webkit-animation-duration: var(--stars-animation-duration-2, 177s);
+	animation-duration: var(--stars-animation-duration-2, 177s);
 }
 
 .active .stars-block--3 {
-	-webkit-animation-duration: 15s;
-	animation-duration: 15s;
+	-webkit-animation-duration: var(--stars-animation-duration-3, 155s);
+	animation-duration: var(--stars-animation-duration-3, 155s);
 }
 
 .stars-item {

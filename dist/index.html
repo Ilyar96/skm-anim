@@ -4388,10 +4388,11 @@
 				starsWrapper.append(clone);
 			}
 
-			function setStarsAnimationDuration(starsBlock, speedDivider) {
-				starsBlock.style.cssText = `
-	animation-duration: ${starsWrapper.offsetHeight / speedDivider}s
-`;
+			function setStarsAnimationDuration(cssVarName, speedDivider) {
+				starsWrapper.style.setProperty(
+					cssVarName,
+					`${starsWrapper.offsetHeight / speedDivider}s`
+				);
 			}
 
 			function createStars(cols, rows, sizeDivider = 6) {
@@ -4449,9 +4450,9 @@
 				const nodeList2 = createStars(cols, rows, 4.5);
 				const nodeList3 = createStars(cols, rows, 1.8);
 
-				setStarsAnimationDuration(starsBlock1, 27);
-				setStarsAnimationDuration(starsBlock2, 32);
-				setStarsAnimationDuration(starsBlock3, 37);
+				setStarsAnimationDuration("--stars-animation-duration-1", 19);
+				setStarsAnimationDuration("--stars-animation-duration-2", 22);
+				setStarsAnimationDuration("--stars-animation-duration-3", 25);
 
 				appendBgBlockToWrapper(starsBlock1, nodeList1);
 				appendBgBlockToWrapper(starsBlock2, nodeList2);
@@ -4465,6 +4466,30 @@
 			const debouncedInitStarsAnimation = debounce(initStarsAnimation, 300);
 
 			window.addEventListener("resize", debouncedInitStarsAnimation);
+
+			// function starsScrollHandler(e) {
+			// 	console.log(1);
+
+			// 	if (!starsWrapper.classList.contains("scrolling")) {
+			// 		setStarsAnimationDuration("--stars-animation-duration-1", 40);
+			// 		setStarsAnimationDuration("--stars-animation-duration-2", 45);
+			// 		setStarsAnimationDuration("--stars-animation-duration-3", 50);
+			// 	}
+
+			// 	starsWrapper.classList.add("scrolling");
+
+			// 	setTimeout(function () {
+			// 		starsWrapper.classList.remove("scrolling");
+
+			// 		setStarsAnimationDuration("--stars-animation-duration-1", 19);
+			// 		setStarsAnimationDuration("--stars-animation-duration-2", 22);
+			// 		setStarsAnimationDuration("--stars-animation-duration-3", 25);
+			// 	}, 1000);
+			// }
+
+			// const throttledStarsScrollHandler = throttle(starsScrollHandler, 1000);
+
+			// window.onwheel = throttledStarsScrollHandler;
 		</script>
 	</body>
 </html>
