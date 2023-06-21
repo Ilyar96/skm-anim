@@ -2565,8 +2565,8 @@ body.ie ._ibg img {
 
 .active .stars-block {
 	opacity: 1;
-	-webkit-animation: moving var(--stars-animation-duration-1, 205s) linear infinite;
-	animation: moving var(--stars-animation-duration-1, 205s) linear infinite;
+	/* -webkit-animation: moving var(--stars-animation-duration-1, 205s) linear infinite;
+	animation: moving var(--stars-animation-duration-1, 205s) linear infinite; */
 }
 
 .stars-block--clone {
@@ -2830,4 +2830,8 @@ body.ie ._ibg img {
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
 	}
+}
+
+.rolly-scroll-view {
+	display: none;
 }

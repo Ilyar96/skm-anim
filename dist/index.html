@@ -4288,6 +4288,7 @@
 
 		<div id="wt-sky-root"></div>
 
+		<script src="https://unpkg.com/rolly.js@v0.4.0/dist/rolly.min.js"></script>
 		<script>
 			const now =
 				Date.now ||
@@ -4421,7 +4422,13 @@
 				return nodeList;
 			}
 
+			let starsRolly = null;
+
 			function initStarsAnimation() {
+				if (starsRolly) {
+					starsRolly.destroy();
+				}
+
 				const cols = createSubdivRange(
 					{ from: 0, to: starsWrapper.clientWidth },
 					cellWidthRange
@@ -4436,9 +4443,9 @@
 				starsWrapper.insertAdjacentHTML(
 					"afterbegin",
 					`
-			<div class="stars-block stars-block--1"></div>
-			<div class="stars-block stars-block--2"></div>
-			<div class="stars-block stars-block--3"></div>
+			<div class="stars-block stars-block--1" data-scene data-speed="0.2"></div>
+			<div class="stars-block stars-block--2" data-scene data-speed="0.3"></div>
+			<div class="stars-block stars-block--3" data-scene data-speed="0.4"></div>
 		`
 				);
 
@@ -4450,15 +4457,22 @@
 				const nodeList2 = createStars(cols, rows, 4.5);
 				const nodeList3 = createStars(cols, rows, 1.8);
 
-				setStarsAnimationDuration("--stars-animation-duration-1", 19);
-				setStarsAnimationDuration("--stars-animation-duration-2", 22);
-				setStarsAnimationDuration("--stars-animation-duration-3", 25);
+				// setStarsAnimationDuration("--stars-animation-duration-1", 19);
+				// setStarsAnimationDuration("--stars-animation-duration-2", 22);
+				// setStarsAnimationDuration("--stars-animation-duration-3", 25);
 
 				appendBgBlockToWrapper(starsBlock1, nodeList1);
 				appendBgBlockToWrapper(starsBlock2, nodeList2);
 				appendBgBlockToWrapper(starsBlock3, nodeList3);
 
 				starsWrapper.classList.add("active");
+
+				starsRolly = rolly({
+					view: document.querySelector(".stars"),
+					native: true,
+				});
+
+				starsRolly.init();
 			}
 
 			initStarsAnimation();
@@ -4466,30 +4480,6 @@
 			const debouncedInitStarsAnimation = debounce(initStarsAnimation, 300);
 
 			window.addEventListener("resize", debouncedInitStarsAnimation);
-
-			// function starsScrollHandler(e) {
-			// 	console.log(1);
-
-			// 	if (!starsWrapper.classList.contains("scrolling")) {
-			// 		setStarsAnimationDuration("--stars-animation-duration-1", 40);
-			// 		setStarsAnimationDuration("--stars-animation-duration-2", 45);
-			// 		setStarsAnimationDuration("--stars-animation-duration-3", 50);
-			// 	}
-
-			// 	starsWrapper.classList.add("scrolling");
-
-			// 	setTimeout(function () {
-			// 		starsWrapper.classList.remove("scrolling");
-
-			// 		setStarsAnimationDuration("--stars-animation-duration-1", 19);
-			// 		setStarsAnimationDuration("--stars-animation-duration-2", 22);
-			// 		setStarsAnimationDuration("--stars-animation-duration-3", 25);
-			// 	}, 1000);
-			// }
-
-			// const throttledStarsScrollHandler = throttle(starsScrollHandler, 1000);
-
-			// window.onwheel = throttledStarsScrollHandler;
 		</script>
 	</body>
 </html>
