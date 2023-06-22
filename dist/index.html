@@ -4383,10 +4383,10 @@
 			function appendBgBlockToWrapper(bgBlockNode, nodeList) {
 				bgBlockNode.append(...nodeList);
 
-				const clone = bgBlockNode.cloneNode(true);
-				clone.classList.add("stars-block--clone");
+				// const clone = bgBlockNode.cloneNode(true);
+				// clone.classList.add("stars-block--clone");
 
-				starsWrapper.append(clone);
+				// starsWrapper.append(clone);
 			}
 
 			function setStarsAnimationDuration(cssVarName, speedDivider) {
@@ -4434,7 +4434,7 @@
 					cellWidthRange
 				);
 				const rows = createSubdivRange(
-					{ from: 0, to: starsWrapper.clientHeight },
+					{ from: 0, to: starsWrapper.clientHeight * 2 },
 					cellHeightRange
 				);
 
